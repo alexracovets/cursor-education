@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #00d9ff;
+    padding: 30px 10px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-shadow: grey 2px 3px;
+    text-align: center;
+}
+
+.products-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.products-wrapper .item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 4px dashed black;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+.products-wrapper .item .item-product {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.products-wrapper .item .item-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+.products-wrapper .item .item-price {
+    font-family: 'Lobster', cursive;
+    color: #ff8600;
+    font-size: 30px;
+}
+
+.values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.wrapper-values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+.wrapper-values .item {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin: 10px;
+    border: 3px dashed black;
+    border-radius: 10px;
+}
+
+.wrapper-values .item .item-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.wrapper-values .item .item-price {
+    font-family: 'Lobster', cursive;
+    color: #ff8600;
+    font-size: 20px;
+}
