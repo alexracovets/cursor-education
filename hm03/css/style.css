@@ -1,0 +1,99 @@
+body * {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #00d9ff;
+    padding: 30px 10px;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px white dashed;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 10px auto;
+}
+
+.task .ask {
+    font-size: 22px;
+}
+
+.task .ask span {
+    color: black;
+    display: inline;
+    font-weight: bold;
+}
+
+.task .input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.task .input-wrapper input {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 40px;
+    width: 100%;
+    display: block;
+    margin-right: 5px;
+}
+
+.task .input-wrapper input:focus {
+    border: 2px solid gray;
+}
+
+.task .input-wrapper input::placeholder {
+    color: gray;
+}
+
+.task .input-wrapper button {
+    display: block;
+    margin-left: 5px;
+    height: 40px;
+    border: 2px dashed white;
+    border-radius: 40px;
+    padding: 0 10px;
+    background-color: #dc7d7d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.task .result {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.task .result span {
+    display: inline;
+    color: #dc7d7d;
+    text-transform: none;
+}
+
+.degree-wrapper {
+    position: relative;
+}
+
+.degree-wrapper .degree {
+    position: absolute;
+    top: -5px;
+    font-size: 80%;
+}

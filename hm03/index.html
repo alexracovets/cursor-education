@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 1:</span> Створити функцію getMaxDigit(number) - яка отримує будь-яку число та виводить
+            найбільшу цифру в цьому числі.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Наприклад: '1236 6'" id="input1">
+        </div>
+
+        <div class="result">Результат: <span id="result1"></span></div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 2:</span> Створити функцію, яка визначає ступінь числа. Використовуючи цикл.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Наприклад: '25'" id="input2">
+        </div>
+
+        <div class="result">Результат:
+            <span class="degree-wrapper">
+                <span id="result2-number"></span>
+                <span id="result2-degree" class="degree"></span>
+            </span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 3:</span> Створити функцію, яка форматує ім'я, роблячи першу букву
+            великою.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Наприклад: 'вЛАД'" id="input3">
+        </div>
+
+        <div class="result">Результат: <span id="result3"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 4:</span> Створити функцію, яка вираховує суму, що залишається після
+            оплати податку від зарабітньої плати. (Податок = 18% + 1.5% ->
+            19.5%).
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Наприклад: '1000'" id="input4">
+        </div>
+
+        <div class="result">Результат: <span id="result4"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 5:</span> Створити функцію, яка повертає випадкове ціле число в
+            діапазоні від <span>N</span> до <span>M</span>.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="N: '1'" id="input5N">
+            <input type="text" placeholder="M: '10'" id="input5M">
+        </div>
+
+        <div class="result">Результат: <span id="result5"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 6:</span> Створити функцію, яка рахує скільки разів певна буква
+            повторюється в слові.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Літера: 'а'" id="input6L">
+            <input type="text" placeholder="Слово: 'Асталавіста'" id="input6W">
+        </div>
+
+        <div class="result">Результат: <span id="result6"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 7:</span> Створіть функцію, яка конвертує долари в гривні та навпаки в
+            залежності від наявності символа <span>$</span> або <span>UAH</span> в рядку.
+        </div>
+        <br>
+        <div class="ask">
+            <span> Завдання 8:</span> Врахуйте, інші валюти не конвертуються, потрібно виводити
+            помилку, і також регістр <span>uah</span> не має значення.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Введіть валюту: '2500UAH'" id="input7">
+        </div>
+
+        <div class="result">Результат: <span id="result7"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 9:</span> Створіть функцію генерації випадкового паролю (тільки числа),
+            довжина встановлюється користувачем або по замовчуванню = <span>8</span> символам.
+        </div>
+        <div class="input-wrapper">
+            <input type="number" placeholder="Введіть кількість цифр паролю" id="input9" maxlength="12">
+        </div>
+
+        <div class="result">Результат: <span id="result9"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 10:</span> Створіть функцію, яка видаляє всі букви з речення.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Літера: 'a'" id="inputL10" maxlength="1">
+            <input type="text" placeholder="Речення: 'blablabla'" id="inputS10">
+        </div>
+
+        <div class="result">Результат: <span id="result10">blblbl</span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 11:</span> Створіть функцію, яка перевіряє, чи є слово паліндромом.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Введіть слово: Я несу гусеня" id="input11">
+        </div>
+
+        <div class="result">Результат: <span id="result11"></span>
+        </div>
+    </div>
+    <div class="task">
+        <div class="ask">
+            <span> Завдання 12:</span> Створіть функцію, яка видалить з речення букви, які
+            зустрічаються більше 1 разу.
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Введіть речення" id="input12">
+        </div>
+
+        <div class="result">Результат: <span id="result12"></span>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/onload.js"></script>
+</body>
+
+</html>
