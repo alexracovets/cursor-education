@@ -1,17 +1,40 @@
 
-function getPrompt(ask) {
-    let prompting = prompt(ask);
+let isSkipEven,
+    conditionEven,
+    isSkipEvenl,
+    resultSum,
+    numberN,
+    numberM;
 
-    return prompting
+while (true) {
+    numberN = prompt('Введіть цифру N');
+
+    if (isNaN(numberN)) {
+        alert('N не є цифрою');
+        continue;
+    }
+
+    break;
 }
 
-function getNumber(text) {
+while (true) {
+    numberM = prompt('Введіть цифру M');
 
-    let gettingNumber = Number(getPrompt(text));
-    gettingNumber = isNaN(gettingNumber) ? 0 : Number.isInteger(gettingNumber) ? gettingNumber : Math.floor(gettingNumber);
+    if (isNaN(numberM)) {
+        alert('N не є цифрою');
+        continue;
+    }
 
-    return gettingNumber;
+    if (numberN >= numberM) {
+        alert('M має бути більше ніж N')
+        continue;
+    }
+
+    break;
 }
+
+isSkipEven = confirm('пропускати парні числа так/ні?');
+
 
 function summing(N, M, isNotSumEven) {
     let sum = 0;
@@ -29,21 +52,7 @@ function summing(N, M, isNotSumEven) {
     return sum
 }
 
-
-let numberN,
-    numberM,
-    isSkipEven,
-    conditionEven,
-    isSkipEvenl,
-    resultSum;
-
-
-numberN = getNumber('Введіть ціле число N. (Якщо число не ціле, воно буде приведенно до наменшого цілого числа)');
-numberM = getNumber('Введіть ціле число M. (Якщо число не ціле, воно буде приведенно до наменшого цілого числа)');
-conditionEven = getPrompt('Введіть умову чи пропускати парні числа так/ні ?');
-
-isSkipEven = conditionEven == 'так' ? true : false;
 resultSum = summing(numberN, numberM, isSkipEven)
 
-console.log(`N = ${numberN}, M = ${numberM}, Враховувати парні числа = ${isSkipEven ? 'ні' : 'так'}, Результат = ${resultSum}`); 
+console.log(`N = ${numberN}, M = ${numberM}, Враховувати парні числа = ${isSkipEven ? 'ні' : 'так'}, Результат = ${resultSum}`);
 
