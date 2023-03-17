@@ -137,7 +137,7 @@ function generateCombinations(word) {
         }
     }
 
-    const result = [...new Set(cicle)];
+    const result = [...new Set(cicle, ' ')];
 
     return result;
 } 
