@@ -7,10 +7,10 @@ let isSkipEven,
     numberM;
 
 while (true) {
-    numberN = prompt('Введіть цифру N');
+    numberN = +prompt('Введіть цифру N');
 
-    if (isNaN(numberN)) {
-        alert('N не є цифрою');
+    if (isNaN(numberN) || !Number.isInteger(numberN)) {
+        alert('N не є коректною цифрою');
         continue;
     }
 
@@ -20,8 +20,8 @@ while (true) {
 while (true) {
     numberM = prompt('Введіть цифру M');
 
-    if (isNaN(numberM)) {
-        alert('N не є цифрою');
+    if (isNaN(numberM) || !Number.isInteger(numberN)) {
+        alert('N не є коректною цифрою');
         continue;
     }
 
