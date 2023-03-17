@@ -18,7 +18,7 @@ while (true) {
 }
 
 while (true) {
-    numberM = prompt('Введіть цифру M');
+    numberM = +prompt('Введіть цифру M');
 
     if (isNaN(numberM) || !Number.isInteger(numberN)) {
         alert('N не є коректною цифрою');
