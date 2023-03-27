@@ -19,7 +19,7 @@ class Student {
         }
 
         const sum = this._marks.reduce((total, mark) => total + mark, 0);
-        const average = (sum / this.marks.length).toFixed(1);
+        const average = (sum / this._marks.length).toFixed(1);
 
         return average;
     }
