@@ -82,3 +82,26 @@ person.recover();
 person.marks = 5;
 console.log(person.marks);
 
+// Advanced 
+
+class BudgetStudent extends Student {
+    constructor(university, course, fullName) {
+        super(university, course, fullName);
+
+        setInterval(() => {
+            this.getScholarship();
+        }, 30000);
+
+    }
+
+    getScholarship() {
+        if (!this.dismissed && this.getAverageMark() >= 4) {
+            console.log(`Ви отримали 1400 грн. стипендії`);
+        } else {
+            console.log(`Ви не можете отримати стипендію`);
+        }
+    }
+}
+const budgetStudent = new BudgetStudent('Вищої Школи Психотерапії', 1, 'Остап Родоманський Бендер');
+
+budgetStudent.getScholarship();
