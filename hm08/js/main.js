@@ -56,31 +56,31 @@ const person = new Student('Вищої Школи Психотерапії', 1, 
 
 // #2
 
-console.log(person.getInfo());
+console.log(`Інформація студента: ${person.getInfo()}`);
 
 // #3
-console.log(person.marks);
+console.log(`Гетер marks: ${[...person.marks]}`);
 
 // #4
 
 person.marks = 5;
-console.log(person.marks);
+console.log(`Сетер marks: ${[...person.marks]}`);
 
 // #5
 
-console.log(person.getAverageMark());
+console.log(`Середня оцінка: ${person.getAverageMark()}`);
 
 // #6
 
 person.dismiss();
 person.marks = 5;
-console.log(person.marks);
+console.log(`Студент виключений, його статус в системі: ${person.marks}`);
 
 // #7
 
 person.recover();
 person.marks = 5;
-console.log(person.marks);
+console.log(`Студент поновлений, його статус в системі: ${person.marks}`);
 
 // Advanced 
 
