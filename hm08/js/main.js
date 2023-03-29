@@ -72,14 +72,12 @@ console.log(`Середня оцінка: ${person.getAverageMark()}`);
 
 // #6
 
-person.dismiss();
-person.marks = 5;
+person.dismiss(); 
 console.log(`Студент виключений, його статус в системі: ${person.marks}`);
 
 // #7
 
-person.recover();
-person.marks = 5;
+person.recover(); 
 console.log(`Студент поновлений, його статус в системі: ${person.marks}`);
 
 // Advanced 
