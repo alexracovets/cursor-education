@@ -90,8 +90,7 @@ const colorSwitchBtn = document.querySelector('.color-switch');
 
 createWrapperBtn.onclick = function () {
     creater.refresh();
-    creater.wrapper();
-    creater.boxsCreator();
+    generateBlocks();
 };
 
 colorSwitchBtn.onclick = function () {
