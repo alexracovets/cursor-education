@@ -1,0 +1,49 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: #351515;
+}
+
+h1 {
+    color: #e49e31;
+    font-family: 'Merienda', cursive;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.keys {
+    margin: 0 auto;
+    max-width: 600px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.key {
+    width: 160px;
+    height: 160px;
+    float: left;
+    transition: all 70ms;
+    border-radius: 5px;
+    background-color: #5a50a9;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+kbd {
+    font-family: 'Merienda', cursive;
+    font-weight: 900;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 60px;
+    color: #e49e31;
+}
+
+.playing {
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.3);
+    background-color: #7d70e2;
+}
