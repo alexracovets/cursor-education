@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/bg.gif);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    font-family: 'Alfa Slab One', cursive;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.select-wrapper {
+    margin-left: 10px;
+    position: relative;
+    padding-right: 10px;
+}
+
+select {
+    border: 2px solid white;
+    font-family: 'Alfa Slab One', cursive;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    appearance: none;
+    padding: 0 10px;
+    text-transform: uppercase;
+    padding-right: 30px;
+    border-radius: none;
+}
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/select.png);
+    background-size: cover;
+}
+
+option {
+    color: black;
+}
+
+.infoLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infoLayout .item {
+    outline: 2px solid white;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.infoLayout .item .info {
+    width: 100%;
+    min-width: 350px;
+    min-height: 453px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px;
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.infoLayout .item .info:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-shadow: 5px -3px rgba(2, 2, 2, 0.3);
+}
+
+.arrow {
+    width: 100%;
+    position: relative;
+}
+
+.arrow .prev,
+.arrow .next {
+    border: 2px solid white;
+    position: fixed;
+    top: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.arrow .prev {
+    left: 20px;
+}
+
+.arrow .prev img {
+    transform: rotate(180deg);
+}
+
+.arrow .prev.disable,
+.arrow .next.disable {
+    display: none;
+}
+
+.arrow .next {
+    right: 20px;
+}
+
+@media (max-width:800px) {
+    label {
+        font-size: 18px;
+    }
+
+    select {
+        font-size: 25px;
+        padding-right: 20px;
+    }
+
+    .select-wrapper::after {
+        right: 15px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width:530px) {
+    .button-wrapper {
+        max-width: 300px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .arrow .prev,
+    .arrow .next {
+        top: 280px;
+    }
+}
+
+@media (max-width:380px) {
+    .infoLayout .item {
+        width: 100%;
+    }
+
+    .infoLayout .item .info {
+        min-width: auto;
+    }
+}
