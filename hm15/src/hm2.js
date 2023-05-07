@@ -1,0 +1,57 @@
+
+export function mathAlert() {
+    let isSkipEven,
+        resultSum,
+        numberN,
+        numberM;
+
+    while (true) {
+        numberN = +prompt('Введіть цифру N');
+
+        if (isNaN(numberN) || !Number.isInteger(numberN)) {
+            alert('N не є коректною цифрою');
+            continue;
+        }
+
+        break;
+    }
+
+    while (true) {
+        numberM = +prompt('Введіть цифру M');
+
+        if (isNaN(numberM) || !Number.isInteger(numberN)) {
+            alert('N не є коректною цифрою');
+            continue;
+        }
+
+        if (numberN >= numberM) {
+            alert('M має бути більше ніж N')
+            continue;
+        }
+
+        break;
+    }
+
+    isSkipEven = confirm('пропускати парні числа так/ні?');
+
+
+    function summing(N, M, isNotSumEven) {
+        let sum = 0;
+
+        for (let i = N; i <= M; i++) {
+            let argument = Number(i);
+
+            if (isNotSumEven) {
+                sum += i % 2 === 0 ? 0 : argument;
+            } else {
+                sum = sum + argument;
+            }
+
+        }
+        return sum;
+    }
+
+    resultSum = summing(numberN, numberM, isSkipEven)
+
+    return console.log('HW 3: ', `N = ${numberN}, M = ${numberM}, Враховувати парні числа = ${isSkipEven ? 'ні' : 'так'}, Результат = ${resultSum}`);
+}
