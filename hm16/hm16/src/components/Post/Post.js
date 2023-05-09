@@ -5,7 +5,6 @@ import { faComment, faRetweet, faHeart, faDownload } from "@fortawesome/free-sol
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Post(props) {
-    console.log(props.date)
     return (
         <div className='post'>
             <div className='post-image'>
