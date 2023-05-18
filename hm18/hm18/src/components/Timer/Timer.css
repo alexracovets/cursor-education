@@ -1,0 +1,28 @@
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 20vw;
+    color: white;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-buttons button {
+    border: none;
+    color: white;
+    background-color: rgb(35, 100, 143);
+    font-size: 70px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    outline: 2px solid white;
+    margin: 10px;
+    cursor: pointer;
+}
