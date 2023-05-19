@@ -1,79 +1,112 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
 import './Timer.css';
 
-// function Timer(props) {
-//     const time = props.time;
+export default class Timer extends React.Component {
 
-//     const [currentTime, setTimeLeft] = useState(time);
-//     const [isCounting, setIsCounting] = useState(false);
-
-//     const minutes = Math.floor(currentTime / 60).toString().padStart(2, '0');
-//     const seconds = (currentTime - minutes * 60).toString().padStart(2, '0');
-
-//     const timerStart = function () {
-//         setIsCounting(true);
-//     }
-//     const timerStop = function () {
-//         setIsCounting(false);
-//     }
-//     const timerReset = function () {
-//         setIsCounting(false);
-//         setTimeLeft(time);
-//     }
-
-//     useEffect(() => {
-//         const interval = setInterval(() => {
-//             isCounting &&
-//                 setTimeLeft((currentTime) => (currentTime >= 1 ? currentTime - 1 : 0))
-//         }, 1000);
-
-//         if (currentTime === '0') {
-//             setIsCounting(false);
-//         };
-
-//         return () => {
-//             clearInterval(interval);
-//         };
-//     }, [currentTime, isCounting]);
-
-
-//     return (
-//         <div className='timer-wrapper'>
-//             <div className='timer'>
-//                 <span>{minutes}</span>
-//                 <span>:</span>
-//                 <span>{seconds}</span>
-//             </div>
-//             <div className='timer-buttons'>
-//                 {isCounting ? (
-//                     <button onClick={timerStop}>Stop</button>
-//                 ) :
-//                     (
-//                         <button onClick={timerStart}>Start</button>
-//                     )
-//                 }
-//                 <button onClick={timerReset}>Reset</button>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Timer;
-
-class Timer extends Component {
-    state = {
-        time: 1000 * 1000 // ms, = 1000s
+    constructor(props) {
+        super(props);
+        this.state = {
+            time: props.time,
+            startTime: new Date().getTime(),
+            endTime: new Date().getTime() + props.time,
+            nowTime: new Date().getTime(),
+            currentTime: this.props.time,
+            isCounting: false,
+            isTick: this.props.autostart,
+            lineWidth: '100%',
+            steps: props.steps * 1000,
+        }
     }
-    onTimeEnd = () => this.setState({ time: 1000 * 1000 })
-    onTimeChange = (time) => this.setState({ time })
+
+    componentDidMount() {
+        this.tick()
+    }
+
+    count(number) {
+        return number - this.state.steps / 1000;
+    }
+
+    mins() {
+        return Math.floor(this.state.currentTime / 60).toString().padStart(2, '0');
+    }
+
+    secs() {
+        return (this.state.currentTime - this.mins() * 60).toString().padStart(2, '0');
+    }
+
+    timerStart() {
+        this.setState({
+            isTick: true,
+        });
+    }
+
+    timerStop() {
+        this.setState({
+            isTick: false,
+        });
+    }
+
+    timerReset() {
+        this.setState({
+            isTick: false,
+            currentTime: this.state.time,
+            lineWidth: "100%",
+        });
+    }
+
+    tick() {
+
+        this.timer = setInterval(() => {
+            if (this.state.isTick) {
+                if (this.state.currentTime >= 1) {
+
+                    this.setState({
+                        currentTime: this.count(this.state.currentTime),
+                        lineWidth: Math.ceil((this.state.currentTime * 100) / this.state.time) + "%"
+                    });
+
+                    if (this.state.currentTime === 1) {
+                        this.setState({
+                            lineWidth: "0%"
+                        });
+                    }
+                } else {
+                    this.setState(
+                        {
+                            lineWidth: "100%",
+                            startTime: new Date().getTime(),
+                            endTime: new Date().getTime() + this.props.time,
+                            currentTime: this.props.time,
+                        }
+                    )
+                }
+            }
+            console.log(this.state.steps)
+        }, this.state.steps);
+    }
+
     render() {
-        return <Timer time={this.state.time} onTimeChange=
-            {this.onTimeChange} onTimeEnd={this.onTimeEnd} step={10000}
-            autostart
-        />
-    }
-}
+        return (
+            <div className='timer-wrapper'>
+                <div className='timer'>
+                    <span>{this.mins()}</span>
+                    <span>:</span>
+                    <span>{this.secs()}</span>
+                </div>
 
-export default Timer
+                <div className='line-wrapper'>
+                    <div className='line' style={{ width: this.state.lineWidth }} value={this.state.steps / 1000}></div>
+                </div>
+                <div className='timer-buttons'>
+                    {
+                        this.state.isTick ?
+                            (<button onClick={() => this.timerStop()}>Stop</button>) :
+                            (<button onClick={() => this.timerStart()}>Start</button>)
+                    }
+                    <button onClick={() => this.timerReset()}>Reset</button>
+                </div>
+            </div >
+        )
+    }
+} 

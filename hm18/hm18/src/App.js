@@ -4,7 +4,7 @@ const time = 120;
 
 function App() {
     return (
-        <Timer time={time} autostart={true} />
+        <Timer time={time} autostart={true} steps={2} />
     );
 }
 
