@@ -5,7 +5,7 @@ const HomeStart = () => {
     return (
         <div className="start-wrapper">
             <div className="start-img">
-                <img src={StartImage} alt='' />
+                <img src={StartImage} alt='StartImage' />
             </div>
             <div className="start-text">
                 I am not your FATHER! It was a JOKE!!!!
